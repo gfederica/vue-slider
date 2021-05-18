@@ -14,11 +14,15 @@
 <body>
     <div id="root">
         <div class="wrapper">
-            <div class="previous"><i class="far fa-caret-square-left"></i></div>
+            <div class="previous"><i class="far fa-caret-square-left" @click="previousImage"></i></div>
             <div class="preview">
-                <img :src="images[0]" alt="">
+                <img :src="images[imageIndex]" alt="">
+                <!-- ciclo tanti cerchi quanti gli elementi dell'array di immagini, aggiungo anche index perchè mi servirà collegarlo all'indice dell'array di immagini. quando index di i corrisponde a index di images, il pallino diventa pieno ad indicare la posizione nel carosello -->
+                <div class="circles">
+                    <i class="fa-circle" v-for="(item, index) in images" :class="(index == imageIndex)? 'fas' : 'far'"></i>
+                </div>
             </div>
-            <div class="next"><i class="far fa-caret-square-right"></i></div>
+            <div class="next"><i class="far fa-caret-square-right" @click="nextImage"></i></div>
         </div>
 
 

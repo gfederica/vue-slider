@@ -10,7 +10,7 @@ body {
 
 .wrapper {
     display: flex;
-    width: 85%;
+    width: 80%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 
 .previous,
 .next {
-    width: 80px;
+    width: 120px;
     height: 600px;
     display: flex;
     justify-content: center;
@@ -27,11 +27,12 @@ body {
 }
 
 .preview {
-    width: calc(100% - 160px);
+    width: calc(100% - 240px);
     height: 600px;
 }
 
-i {
+.previous i,
+.next i {
     font-size: 40px;
     color: lightslategray;
     cursor: pointer;
@@ -41,6 +42,19 @@ i {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position:top;
+    object-position:center;
 
+
+}
+
+.circles {
+   text-align: center;
+    position: relative;
+    top: -30px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.circles i {
+    padding: 5px;
+    color: white;
 }
