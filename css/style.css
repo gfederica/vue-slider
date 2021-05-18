@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    width: 85%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.previous,
+.next {
+    width: 80px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    width: calc(100% - 160px);
+    height: 600px;
+}
+
+i {
+    font-size: 40px;
+    color: lightslategray;
+    cursor: pointer;
+}
+
+.preview img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:top;
+
+}
