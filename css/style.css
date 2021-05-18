@@ -57,4 +57,5 @@ body {
 .circles i {
     padding: 5px;
     color: white;
+    cursor: pointer;
 }
